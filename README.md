@@ -1,33 +1,33 @@
 # choco
 
-A financing primitive: a **financier co‑purchases an asset with a client**, the
-client economically owns all of it from day one, and the financed portion is held
-as collateral that is **released progressively** as the client repays principal.
+Choco is a high-level specification for a Bitcoin financing platform.
 
-A first‑loss buffer — funded by the client's own down payment — absorbs adverse
-price moves, so the financier is not exposed to day‑to‑day volatility and never
-has to force a sale. There are no price oracles after origination, no margin
-calls, and no automatic liquidation.
+The platform lets a client acquire more Bitcoin than their cash down payment
+would otherwise allow. Choco funds the remaining principal, the client receives
+economic ownership of the full position at funding, and part of the Bitcoin is
+held as collateral until repayment milestones are reached.
 
-> Buy more of the asset today. Repay over a fixed term. Every principal payment
-> releases more of it to you.
+> Buy more Bitcoin today. Repay over time. Unlock more of your Bitcoin as you
+> pay.
 
-## Read the spec
+## Read The Spec
 
-**[SPEC.md](SPEC.md)** — the formal, implementation‑independent specification:
+**[SPEC.md](SPEC.md)** describes the platform model:
 
-- the position model and its invariant (`owned = locked + available + reserved`)
-- the two‑phase loan lifecycle (request → fund → active → settled; reject; default)
-- tranching at origination (immediate / equity / financed)
-- progressive collateral release, proportional to principal repaid
-- interest (simple, ACT/365, from funding; reads never mutate state)
-- level‑payment schedule and interest‑first payment application
-- delinquency (computed) vs. default (declared)
-- the append‑only, balanced double‑entry ledger model
+- fixed starter financing products;
+- admin-controlled approval and funding;
+- client positions split into `available`, `locked`, and `reserved` Bitcoin;
+- progressive unlocks tied to principal repayment;
+- early payoff with full unlock;
+- authorized agent repayment recording;
+- Lightning or Spark-style withdrawal rails;
+- operational wallet controls;
+- reserve visibility and liabilities snapshots.
 
-Concrete numbers in the spec are **illustrative only** and are not part of the
-protocol.
+The spec is intentionally high-level. It explains what the platform allows and
+what must remain true, without binding the product to a specific codebase,
+payment provider, custodian, or deployment architecture.
 
 ## Status
 
-Draft, version 0. This repository is the public specification only.
+Draft, version 0. This repository is the public platform specification.
