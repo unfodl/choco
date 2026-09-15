@@ -1,10 +1,32 @@
 # Choco Platform Specification
 
-| Field | Value |
-| --- | --- |
-| **Status** | Draft |
-| **Audience** | Product, engineering, capital partners, and operators |
-| **Scope** | High-level platform behavior, not implementation detail |
+<table>
+  <tr>
+    <td valign="top" width="72%">
+      <table>
+        <tr>
+          <th align="left">Field</th>
+          <th align="left">Value</th>
+        </tr>
+        <tr>
+          <td><strong>Status</strong></td>
+          <td>Draft</td>
+        </tr>
+        <tr>
+          <td><strong>Audience</strong></td>
+          <td>Product, engineering, capital partners, and operators</td>
+        </tr>
+        <tr>
+          <td><strong>Scope</strong></td>
+          <td>High-level platform behavior, not implementation detail</td>
+        </tr>
+      </table>
+    </td>
+    <td align="right" valign="top" width="28%">
+      <img src="assets/choco-logo.png" alt="Choco logo" width="150">
+    </td>
+  </tr>
+</table>
 
 Choco is a financing platform for acquiring Bitcoin with a small down payment
 and repaying the financed balance over time. The client receives economic
@@ -86,12 +108,41 @@ Each client has a Bitcoin position tracked in integer satoshis:
 owned = available + locked + reserved
 ```
 
-| Balance | Meaning |
-| --- | --- |
-| **Owned** | The client's total economic Bitcoin position. |
-| **Available** | Bitcoin the client can withdraw or spend. |
-| **Locked** | Bitcoin held as collateral until repayment milestones are met. |
-| **Reserved** | Available Bitcoin temporarily held for an in-flight withdrawal or payment. |
+<table>
+  <tr>
+    <td valign="top" width="52%">
+      <table>
+        <thead>
+          <tr>
+            <th align="left">Balance</th>
+            <th align="left">Meaning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Owned</strong></td>
+            <td>The client's total economic Bitcoin position.</td>
+          </tr>
+          <tr>
+            <td><strong>Available</strong></td>
+            <td>Bitcoin the client can withdraw or spend.</td>
+          </tr>
+          <tr>
+            <td><strong>Locked</strong></td>
+            <td>Bitcoin held as collateral until repayment milestones are met.</td>
+          </tr>
+          <tr>
+            <td><strong>Reserved</strong></td>
+            <td>Available Bitcoin temporarily held for an in-flight withdrawal or payment.</td>
+          </tr>
+        </tbody>
+      </table>
+    </td>
+    <td valign="top" width="48%">
+      <img src="assets/position-accounting.png" alt="Choco interface showing position accounting" width="100%">
+    </td>
+  </tr>
+</table>
 
 This position ledger is the client-facing source of truth. External wallet
 balances, payment provider state, and operational liquidity never replace it.
