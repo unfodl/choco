@@ -1,6 +1,6 @@
 # Choco Platform Specification
 
-<p align="center">
+<p align="right">
   <img src="assets/choco-logo.png" alt="Choco logo" width="160">
 </p>
 
