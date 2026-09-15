@@ -1,5 +1,9 @@
 # choco
 
+<p align="center">
+  <img src="assets/choco-logo.png" alt="Choco logo" width="160">
+</p>
+
 Choco is a high-level specification for a Bitcoin financing platform.
 
 The platform lets a client acquire more Bitcoin than their cash down payment
