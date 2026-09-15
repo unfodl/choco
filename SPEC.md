@@ -1,14 +1,32 @@
 # Choco Platform Specification
 
-<p align="right">
-  <img src="assets/choco-logo.png" alt="Choco logo" width="160">
-</p>
-
-| Field | Value |
-| --- | --- |
-| **Status** | Draft |
-| **Audience** | Product, engineering, capital partners, and operators |
-| **Scope** | High-level platform behavior, not implementation detail |
+<table>
+  <tr>
+    <td valign="top" width="72%">
+      <table>
+        <tr>
+          <th align="left">Field</th>
+          <th align="left">Value</th>
+        </tr>
+        <tr>
+          <td><strong>Status</strong></td>
+          <td>Draft</td>
+        </tr>
+        <tr>
+          <td><strong>Audience</strong></td>
+          <td>Product, engineering, capital partners, and operators</td>
+        </tr>
+        <tr>
+          <td><strong>Scope</strong></td>
+          <td>High-level platform behavior, not implementation detail</td>
+        </tr>
+      </table>
+    </td>
+    <td align="right" valign="top" width="28%">
+      <img src="assets/choco-logo.png" alt="Choco logo" width="150">
+    </td>
+  </tr>
+</table>
 
 Choco is a financing platform for acquiring Bitcoin with a small down payment
 and repaying the financed balance over time. The client receives economic
